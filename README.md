@@ -1,6 +1,7 @@
 # Yohan Fraga - Portfolio
 
-![Portfolio Preview](public/portfolio-preview.png)
+![Portfolio Preview]![image](https://github.com/user-attachments/assets/63850719-d3c5-4cd4-9b72-7b100426d955)
+
 
 ## 🔗 [View Live Portfolio](https://v0-typescript-portfolio-site-gamma.vercel.app/)
 
