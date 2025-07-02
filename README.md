@@ -61,6 +61,5 @@ The website is fully responsive with breakpoints for:
 ## 👤 Author
 
 **Yohan Fraga**
-- Website: [yohanfraga.com](https://yohanfraga.com)
-- GitHub: [@yohanfraga](https://github.com/yohanfraga)
 - LinkedIn: [Yohan Fraga](https://linkedin.com/in/yohanfraga)
+- GitHub: [@yohanfraga](https://github.com/yohanfraga)
