@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { ParticlesToggle } from "./particles-toggle"
 
@@ -41,6 +41,14 @@ export default function Navbar() {
             <Link href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">
               Contact
             </Link>
+            <a 
+              href="/Yohan Fraga – Resume.pdf" 
+              download
+              className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
+            >
+              <Download size={20} />
+              <span>Resume</span>
+            </a>
             <div className="flex items-center space-x-4">
               <ParticlesToggle />
               <ThemeToggle />
@@ -100,6 +108,15 @@ export default function Navbar() {
             >
               Contact
             </Link>
+            <a
+              href="/Yohan Fraga – Resume.pdf"
+              download
+              className="flex items-center space-x-2 px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
+              onClick={toggleMenu}
+            >
+              <Download size={20} />
+              <span>Resume</span>
+            </a>
           </div>
         </div>
       )}
