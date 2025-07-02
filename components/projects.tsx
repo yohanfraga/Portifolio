@@ -56,7 +56,7 @@ function CarouselButton({ onClick, children, className }: { onClick: () => void;
   return (
     <button
       onClick={onClick}
-      className={`absolute top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-800 rounded-full p-2 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${className || ''}`}
+      className={`absolute top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-3 shadow-lg hover:bg-white dark:hover:bg-gray-700 transition-all ${className || ''}`}
     >
       {children}
     </button>
@@ -86,12 +86,12 @@ export default function Projects() {
           <div className="mt-2 h-1 w-20 bg-orange-500 mx-auto"></div>
         </div>
         
-        <div className="relative">
-          <CarouselButton onClick={scrollPrev} className="-left-4">
-            <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+        <div className="relative group">
+          <CarouselButton onClick={scrollPrev} className="-left-12 opacity-0 group-hover:opacity-100 lg:-left-16">
+            <ChevronLeft className="w-6 h-6 text-gray-800 dark:text-gray-200" />
           </CarouselButton>
-          <CarouselButton onClick={scrollNext} className="right-4">
-            <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+          <CarouselButton onClick={scrollNext} className="-right-12 opacity-0 group-hover:opacity-100 lg:-right-16">
+            <ChevronRight className="w-6 h-6 text-gray-800 dark:text-gray-200" />
           </CarouselButton>
 
           <div className="overflow-hidden" ref={emblaRef}>
@@ -126,10 +126,10 @@ export default function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors flex items-center w-fit"
+                          className="inline-flex items-center px-4 py-2 rounded-md bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 hover:bg-orange-100 dark:hover:bg-orange-900/30 hover:text-orange-500 dark:hover:text-orange-400 transition-all transform hover:scale-105 hover:shadow-md w-fit"
                         >
-                          <Github size={20} className="mr-1" />
-                          <span>Code</span>
+                          <Github size={20} className="mr-2" />
+                          <span>View Code</span>
                         </Link>
                       </div>
                     </div>

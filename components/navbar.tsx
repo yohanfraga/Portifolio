@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
+import { ParticlesToggle } from "./particles-toggle"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,9 +41,13 @@ export default function Navbar() {
             <Link href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">
               Contact
             </Link>
-            <ThemeToggle />
+            <div className="flex items-center space-x-4">
+              <ParticlesToggle />
+              <ThemeToggle />
+            </div>
           </div>
           <div className="md:hidden flex items-center space-x-4">
+            <ParticlesToggle />
             <ThemeToggle />
             <button onClick={toggleMenu} className="text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 focus:outline-none">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

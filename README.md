@@ -1,63 +1,66 @@
-# Yohan Fraga - Portfolio
+# Yohan Fraga - Portfolio Website
 
-![image](https://github.com/user-attachments/assets/63850719-d3c5-4cd4-9b72-7b100426d955)
-
-
-## 🔗 [View Live Portfolio](https://v0-typescript-portfolio-site-gamma.vercel.app/)
-
-## Overview
-
-This repository contains the source code for Yohan Fraga's personal portfolio website. The portfolio showcases my skills, projects, and professional experience as a Software Engineer specializing in .NET/C# solutions, event-driven architecture, and cloud technologies.
+A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. Features a dark mode, interactive particle effects, and a contact form.
 
 ## 🚀 Features
 
-- Responsive design that works on all devices
-- Clean, modern UI with white and orange color scheme
-- Detailed sections for:
-  - About Me
-  - Projects
-  - Skills
-  - Work Experience
-  - Education
-  - Contact Information
+- **Modern Design**: Clean and professional interface with smooth animations
+- **Responsive Layout**: Optimized for all screen sizes
+- **Dark Mode**: Automatic and manual theme switching
+- **Interactive Elements**:
+  - Particle effects background
+  - Smooth scrolling navigation
+  - Project carousel
+- **Contact Form**: Email integration using Nodemailer
+- **Tech Stack Display**: Visual representation of skills and technologies
+- **Project Showcase**: Carousel display of featured projects
 
-## 💻 Technologies Used
+## 🛠️ Built With
 
-- **Frontend Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
+- **Framework**: Next.js 14
 - **Styling**: Tailwind CSS
-- **Deployment**: Vercel
+- **UI Components**: shadcn/ui
+- **Animations**: 
+  - Framer Motion
+  - React Type Animation
+- **Email Integration**: Nodemailer
+- **Particle Effects**: tsParticles
+- **Icons**: Lucide Icons
 
-## 📋 Project Structure
+## 🏗️ Project Structure
 
-\`\`\`
-portfolio/
+```
 ├── app/                  # Next.js app directory
-│   ├── layout.tsx        # Root layout component
-│   ├── page.tsx          # Home page component
-│   └── globals.css       # Global styles
-├── components/           # React components
-│   ├── about.tsx         # About section
-│   ├── contact.tsx       # Contact section
-│   ├── education.tsx     # Education section
-│   ├── experience.tsx    # Experience section
-│   ├── footer.tsx        # Footer component
-│   ├── hero.tsx          # Hero section
-│   ├── navbar.tsx        # Navigation bar
-│   ├── projects.tsx      # Projects section
-│   └── skills.tsx        # Skills section
-├── public/               # Static assets
-└── README.md             # Project documentation
-\`\`\`
+│   ├── api/             # API routes
+│   └── layout.tsx       # Root layout
+├── components/          # React components
+│   ├── ui/             # UI components
+│   └── sections/       # Page sections
+├── lib/                # Utility functions
+├── public/             # Static assets
+└── styles/            # Global styles
+```
 
-## 📬 Contact
+## 📱 Responsive Design
 
-Feel free to reach out if you have any questions or would like to connect:
+The website is fully responsive with breakpoints for:
+- Mobile devices
+- Tablets
+- Laptops
+- Desktop screens
 
-- Email: yohanfragasantos@gmail.com
-- LinkedIn: [linkedin.com/in/yohanfraga](https://www.linkedin.com/in/yohanfraga/)
-- GitHub: [github.com/yohanfraga](https://github.com/yohanfraga)
+## 🔧 Development Features
 
----
+- TypeScript for type safety
+- ESLint for code quality
+- Prettier for code formatting
+- Tailwind CSS for styling
+- shadcn/ui for consistent UI components
 
-Designed and developed by Yohan Fraga © 2024
+
+## 👤 Author
+
+**Yohan Fraga**
+- Website: [yohanfraga.com](https://yohanfraga.com)
+- GitHub: [@yohanfraga](https://github.com/yohanfraga)
+- LinkedIn: [Yohan Fraga](https://linkedin.com/in/yohanfraga)
