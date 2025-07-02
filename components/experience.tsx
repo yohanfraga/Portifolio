@@ -1,7 +1,7 @@
 const experiences = [
   {
     id: 1,
-    role: "Software Engineer",
+    role: "Backend Software Engineer",
     company: "X-Bits Software",
     location: "Curitiba, Brazil",
     period: "February 2024 - Present",
@@ -11,19 +11,39 @@ const experiences = [
         name: "Traceability Project",
         details: [
           "Developed a traceability system for an explosives company, ensuring compliance with strict regulatory requirements.",
-          "Ensured data sensitivity and compliance by implementing secure logging, encryption, and role-based access control.",
-          "Optimized order processing using Unit of Work and Repository Pattern, handling quantity checks, compliance approvals, and transport scheduling.",
-          "Improved scalability and performance, reducing processing time by 78% through optimized database queries, asynchronous operations, and multithreading.",
-          "Integrated with SAP to synchronize order data, stock movements, and compliance logs via RESTful APIs.",
+          "Achieved 100% compliance with regulatory standards by implementing secure logging and role-based access control.",
+          "Boosted throughput by reducing order processing latency by 78%, leveraging Unit of Work and Repository Patterns, improving quantity validation, compliance approval automation, and transport scheduling efficiency.",
+          "Reduced average database query execution time from 1.8s to 0.4s and improved system responsiveness under high load through asynchronous programming and parallelism.",
+          "Ensured real-time data consistency by integrating with SAP to sync 100% of order data, stock movement logs, and compliance checks via RESTful APIs.",
           "Implemented robust CI/CD pipelines with automated builds, tests, and deployments, ensuring consistent and reliable delivery.",
+          "Designed and maintained unit and integration test suites, enabling early detection of defects and supporting continuous delivery practices.",
+          "Collaborated within a 15-person cross-functional team—including DevOps, software architects, QAs, frontend/backend/mobile developers, UI/UX designers, and a Scrum Master—to define acceptance criteria and ensure high-quality feature delivery.",
         ],
       },
       {
-        name: "Partilha",
+        name: "Partilha Project",
         details: [
-          "Developed a testamentary will software to securely write and store testamentary information.",
+          "Developed a secure testamentary software system designed to help users(lawyers) create, store, and manage digital wills while ensuring legal and data security compliance.",
           "Designed the backend to handle sensitive legal data, ensuring data integrity, encryption, and secure retrieval mechanisms.",
           "Established CI/CD workflows to automate testing and deployment processes, increasing development velocity and ensuring the secure handling of sensitive legal data throughout the delivery pipeline.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    role: "Open Source Contribution",
+    company: "AsyncAPI.NET SDK – V3 Migration",
+    location: "GitHub",
+    period: "2024",
+    description: "Contributed to the migration of the open-source AsyncAPI.NET SDK to version 3.0, aligning with the latest AsyncAPI specification and improving the SDK's long-term maintainability.",
+    projects: [
+      {
+        name: "Core Development",
+        details: [
+          "Migrated and refactored over 20 core schema and model classes, ensuring alignment with the v3.0 specification while preserving backward compatibility.",
+          "Improved schema parsing and validation logic to support complex nested schemas, reducing test failures by 35% and increasing spec compliance.",
+          "Boosted unit test coverage from 62% to 84%, detecting and resolving multiple edge case bugs in the migration process.",
         ],
       },
     ],
@@ -32,34 +52,34 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-800">Experience</h2>
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Experience</h2>
           <div className="mt-2 h-1 w-20 bg-orange-500 mx-auto"></div>
         </div>
         <div className="max-w-3xl mx-auto">
-          <div className="relative border-l-2 border-orange-200 pl-8 ml-4">
+          <div className="relative border-l-2 border-orange-200 dark:border-orange-800 pl-8 ml-4">
             {experiences.map((exp, index) => (
               <div key={exp.id} className={`mb-12 ${index === experiences.length - 1 ? "" : ""}`}>
-                <div className="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] mt-1.5"></div>
-                <h3 className="text-xl font-bold text-gray-800">{exp.role}</h3>
-                <div className="flex items-center text-orange-500 mb-2">
+                <div className="absolute w-4 h-4 bg-orange-500 dark:bg-orange-400 rounded-full -left-[9px] mt-1.5"></div>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">{exp.role}</h3>
+                <div className="flex items-center text-orange-500 dark:text-orange-400 mb-2">
                   <span className="font-medium">{exp.company}</span>
                   <span className="mx-2">•</span>
                   <span>{exp.location}</span>
                   <span className="mx-2">•</span>
                   <span>{exp.period}</span>
                 </div>
-                <p className="text-gray-600 mb-4">{exp.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{exp.description}</p>
 
                 {exp.projects &&
                   exp.projects.map((project, pIndex) => (
                     <div key={pIndex} className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">{project.name}</h4>
+                      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">{project.name}</h4>
                       <ul className="list-disc pl-6 space-y-2">
                         {project.details.map((detail, dIndex) => (
-                          <li key={dIndex} className="text-gray-600">
+                          <li key={dIndex} className="text-gray-600 dark:text-gray-300">
                             {detail}
                           </li>
                         ))}
