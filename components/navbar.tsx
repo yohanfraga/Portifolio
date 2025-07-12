@@ -13,6 +13,23 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const trackResumeDownload = async () => {
+    try {
+      await fetch('/api/resume-downloads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+    } catch (error) {
+      console.error('Error tracking resume download:', error)
+    }
+  }
+
+  const handleResumeDownload = () => {
+    trackResumeDownload()
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-sm">
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
@@ -44,6 +61,7 @@ export default function Navbar() {
             <a 
               href="/Yohan Fraga – Resume.pdf" 
               download
+              onClick={handleResumeDownload}
               className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
             >
               <Download size={20} />
@@ -111,8 +129,11 @@ export default function Navbar() {
             <a
               href="/Yohan Fraga – Resume.pdf"
               download
+              onClick={() => {
+                handleResumeDownload()
+                toggleMenu()
+              }}
               className="flex items-center space-x-2 px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors"
-              onClick={toggleMenu}
             >
               <Download size={20} />
               <span>Resume</span>
